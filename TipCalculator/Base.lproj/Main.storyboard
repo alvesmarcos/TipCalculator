@@ -25,7 +25,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="90"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" weight="thin" pointSize="75"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                     </textField>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="fLA-C2-0bz">
                                         <rect key="frame" x="0.0" y="110" width="343" height="20.5"/>
@@ -75,6 +75,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="subTotalTextField" destination="4OJ-VN-dMW" id="hZ3-Gn-MCC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
