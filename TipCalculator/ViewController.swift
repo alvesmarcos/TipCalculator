@@ -21,10 +21,20 @@ class ViewController: UIViewController {
     // MARK: - Outlets
     @IBOutlet weak var subTotalTextField: UITextField!
     @IBOutlet weak var tipPercentLabel: UILabel!
+    @IBOutlet weak var tipPercentSlider: UISlider!
+    @IBOutlet weak var tipAmountLabel: UILabel!
+    @IBOutlet weak var totalAmountLabel: UILabel!
+    
+    // MARK: - Properties
+    let model = Model()
     
     // MARK: - Interactions
     @IBAction func dragSlider(_ sender: UISlider) {
-        tipPercentLabel.text = "Tip (\(Int(sender.value))%)"
+        let tipPercentAsInt = Int(sender.value)
+        tipPercentLabel.text = "Tip (\(tipPercentAsInt)%)"
+        
+        model.tipPercentFromSlider = tipPercentAsInt
+        updateLabels()
     }
     
     // MARK: - Functions
@@ -53,6 +63,23 @@ class ViewController: UIViewController {
     
     @objc func dismissKeyboard() {
         subTotalTextField.resignFirstResponder()
+        
+        if subTotalTextField.text!.count == 0 {
+            subTotalTextField.text = "$0.00"
+            model.subTotalFromTextField = "0.00"
+            updateLabels()
+        } else {
+            model.subTotalFromTextField = subTotalTextField.text!
+            model.tipPercentFromSlider = Int(tipPercentSlider.value)
+            
+            updateLabels()
+        }
+    }
+    
+    func updateLabels() {
+        subTotalTextField.text = model.subTotalAsCurrency
+        tipAmountLabel.text = model.tipAmountAsCurrency
+        totalAmountLabel.text = model.totalAmountAsCurrency
     }
 }
 

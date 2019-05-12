@@ -19,7 +19,7 @@ class Model {
     }
     
     var tipPercent: NSDecimalNumber {
-        return NSDecimalNumber(value: Double(tipPercentFromSlider/100))
+        return NSDecimalNumber(value: Double(tipPercentFromSlider)/100)
     }
     
     var tipAmount: NSDecimalNumber {
