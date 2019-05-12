@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
     
     // MARK: - View Did Load
     override func viewDidLoad() {
@@ -16,6 +16,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         subTotalTextField.becomeFirstResponder()
         createToolbar()
+        tipPercentSlider.isEnabled = false
     }
     
     // MARK: - Outlets
@@ -35,6 +36,11 @@ class ViewController: UIViewController {
         
         model.tipPercentFromSlider = tipPercentAsInt
         updateLabels()
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        subTotalTextField.text = ""
+        tipPercentSlider.isEnabled = false
     }
     
     // MARK: - Functions
@@ -63,6 +69,7 @@ class ViewController: UIViewController {
     
     @objc func dismissKeyboard() {
         subTotalTextField.resignFirstResponder()
+        tipPercentSlider.isEnabled = true
         
         if subTotalTextField.text!.count == 0 {
             subTotalTextField.text = "$0.00"
@@ -82,4 +89,3 @@ class ViewController: UIViewController {
         totalAmountLabel.text = model.totalAmountAsCurrency
     }
 }
-
