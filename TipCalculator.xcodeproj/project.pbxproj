@@ -12,6 +12,7 @@
 		0D83A74922863EA50025A653 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D83A74722863EA50025A653 /* Main.storyboard */; };
 		0D83A74B22863EA60025A653 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D83A74A22863EA60025A653 /* Assets.xcassets */; };
 		0D83A74E22863EA60025A653 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D83A74C22863EA60025A653 /* LaunchScreen.storyboard */; };
+		0DC8902E22878303002D20C6 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC8902D22878303002D20C6 /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		0D83A74A22863EA60025A653 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0D83A74D22863EA60025A653 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0D83A74F22863EA60025A653 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0DC8902D22878303002D20C6 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				0D83A74322863EA50025A653 /* AppDelegate.swift */,
 				0D83A74522863EA50025A653 /* ViewController.swift */,
+				0DC8902D22878303002D20C6 /* Model.swift */,
 				0D83A74722863EA50025A653 /* Main.storyboard */,
 				0D83A74A22863EA60025A653 /* Assets.xcassets */,
 				0D83A74C22863EA60025A653 /* LaunchScreen.storyboard */,
@@ -135,6 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DC8902E22878303002D20C6 /* Model.swift in Sources */,
 				0D83A74622863EA50025A653 /* ViewController.swift in Sources */,
 				0D83A74422863EA50025A653 /* AppDelegate.swift in Sources */,
 			);
